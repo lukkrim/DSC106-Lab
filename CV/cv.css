@@ -10,7 +10,7 @@ body {
   header h1:first-of-type {
     font-size: 1rem;
     font-weight: 500;
-    color: oklch(45% 0.02 260);
+    color: oklch(72% 0.02 260);
     margin-bottom: 0.5rem;
   }
   
@@ -21,7 +21,7 @@ body {
   
   header p {
     margin-top: 0.5rem;
-    color: oklch(40% 0.02 260);
+    color: oklch(78% 0.02 260);
   }
   
   /* Section cards */
@@ -31,6 +31,11 @@ body {
     border-radius: 0.75rem;
     margin-block: 1rem;
     background: oklch(99% 0.01 250);
+    color: oklch(22% 0.02 260);
+  }
+
+  section a {
+    color: var(--color-accent);
   }
   
   section h2 {
