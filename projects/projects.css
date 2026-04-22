@@ -10,11 +10,3 @@ article {
     grid-row: span 3;
     gap: 0.5em;
 }
-
-h2{
-    font-size: 75%;
-}
-
-p{
-    font-size: 50%;
-}
