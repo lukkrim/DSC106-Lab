@@ -60,3 +60,20 @@ h1, h2, h3, h4, h5, h6 {
   right: 1rem;
   font-size: 80%;
 }
+
+dl {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.5rem 1rem;
+  margin: 1rem 0;
+}
+dt {
+  grid-row: 1;
+  font-weight: 300;
+  font-size: 80%;
+}
+dd {
+  grid-row: 2;
+  margin: 0; /* remove default indent */
+  font-size: 200%;
+}
