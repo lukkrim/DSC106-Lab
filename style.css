@@ -19,6 +19,7 @@ nav {
   --border-color: oklch(50% 10% 200 / 40%);
   display: flex;
   flex-direction: row;
+  margin-top: 2em;
   margin-bottom: 1em;
   border-bottom-width: 1px;
   border-bottom-style: solid;

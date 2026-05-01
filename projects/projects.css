@@ -10,3 +10,70 @@ article {
     grid-row: span 3;
     gap: 0.5em;
 }
+
+.project-year {
+    font-family: Baskerville, serif;
+    font-variant-numeric: oldstyle-nums;
+}
+
+#projects-pie-plot {
+    max-width: 15em;
+    margin-block: 2em; 
+    overflow: visible;
+
+    &:has(path:hover) {
+        path:not(:hover) {
+            opacity: 0.5;
+        }
+    }
+}
+
+path {
+    transition: opacity 300ms, fill 300ms;
+    cursor: pointer;
+}
+
+.legend {
+    display: grid;
+    flex: 1;
+    grid-template-columns: repeat(auto-fill, minmax(10em, 1fr));
+    border: 1px solid #ccc;   
+    padding: 0.5em;
+    margin: 0.5em;
+    gap: 1em;
+}
+
+.swatch{
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    border-radius: 50%;
+    background-color: var(--color);
+}
+
+.legend-item{
+    display: flex;
+    align-items: center;
+    gap: 0.3em;
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    gap: 2em;
+}
+
+.searchBar{
+    width: 100%;
+    padding: 0.5em;
+    border: 1px solid #ccc;
+    border-radius: 0.5em;
+}
+
+.selected {
+    --color: oklch(60% 45% 0) !important;
+  
+    &:is(path) {
+      fill: var(--color);
+    }
+  }
