@@ -20,8 +20,7 @@ let currentProjects = projects;
 
 let searchInput = document.querySelector('.searchBar');
 
-// Re-derive currentProjects from the source `projects` based on current filters.
-// If no filter is active (empty query and no year selected), currentProjects === projects.
+
 function updateCurrentProjects() {
   let result = projects;
   if (query) {
@@ -36,8 +35,7 @@ function updateCurrentProjects() {
   currentProjects = result;
 }
 
-// The pie chart should reflect only the search filter, so all year wedges
-// remain clickable even when one year is selected.
+
 function getSearchedProjects() {
   if (!query) return projects;
   return projects.filter((p) => {
@@ -46,11 +44,9 @@ function getSearchedProjects() {
   });
 }
 
-// Full re-render: rebuild the pie chart and project list from scratch.
-// Used when the search query changes, since the set of year wedges may change.
+
 function rerender() {
   let searched = getSearchedProjects();
-  // Auto-deselect if the selected year no longer exists in the search results
   if (selectedYear !== null && !searched.some((p) => p.year === selectedYear)) {
     selectedYear = null;
   }
